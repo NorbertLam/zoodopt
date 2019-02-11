@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
   end
 
   def home
+    @latest = Pet.all.last(3)
     render :home
   end
 

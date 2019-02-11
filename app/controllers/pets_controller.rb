@@ -1,7 +1,7 @@
 class PetsController < ApplicationController
   before_action :authorized
-  
-  def index 
+
+  def index
     if logged_in?
       @pets = current_user.pets
     else
@@ -12,4 +12,6 @@ class PetsController < ApplicationController
   def show
     @pet = Pet.find(params[:id])
   end
+
+  
 end
