@@ -10,9 +10,9 @@ Animal.create(name: "Dog", endangered: false)
 Animal.create(name: "Cat", endangered: false)
 
 File.open("dogs.txt").each do |line|
-  Pet.create!(name: Faker::Dog.name, gender: Faker::Dog.gender, weight: Faker::Dog.size, animal_id: 1, image_url: line)
+  Pet.create!(name: Faker::Dog.name, gender: Faker::Dog.gender, weight: Faker::Dog.size, animal_id: 1, adopted: false, image_url: line)
 end
 
 File.open("cats.txt").each do |line|
-  Pet.create!(name: Faker::Cat.name, gender: Faker::Dog.gender, weight: Faker::Dog.size, animal_id: 2, image_url: line)
+  Pet.create!(name: Faker::Cat.name, gender: Faker::Dog.gender, weight: Faker::Dog.size, animal_id: 2, adopted: false, image_url: line)
 end

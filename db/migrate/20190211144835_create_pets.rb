@@ -6,9 +6,10 @@ class CreatePets < ActiveRecord::Migration[5.2]
       t.string :gender
       t.string :image_url
       t.integer :age
-      t.text :about
       t.integer :user_id
       t.integer :animal_id
+      t.text :about
+      t.boolean :adopted
 
       t.timestamps
     end
