@@ -106,17 +106,18 @@ body, html {
 
 .about-text {
   color: white;
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-  font-size: 18px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 450px;
+  font-size: 2rem;
 }
 
 .pushdown {
-  margin-top: 100px;
+  margin-top: 50px;
 
 }
 
 #fixingit {
+  margin-top: 100px;
   position: fixed;
 }
