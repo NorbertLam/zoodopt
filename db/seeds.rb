@@ -1,13 +1,13 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
 Animal.create(name: "Dog", endangered: false)
 Animal.create(name: "Cat", endangered: false)
+Animal.create(name: "Bird", endangered: false)
+Animal.create(name: "Fish", endangered: false)
+Animal.create(name: "Panda", endangered: false)
+Animal.create(name: "Turtle", endangered: false)
+Animal.create(name: "Alligator", endangered: false)
+Animal.create(name: "Snake", endangered: false)
+Animal.create(name: "Lizard", endangered: false)
 
 File.open("dogs.txt").each do |line|
   Pet.create!(name: Faker::Dog.name, gender: Faker::Dog.gender, weight: Faker::Dog.size, animal_id: 1, adopted: false, image_url: line)
@@ -16,3 +16,13 @@ end
 File.open("cats.txt").each do |line|
   Pet.create!(name: Faker::Cat.name, gender: Faker::Dog.gender, weight: Faker::Dog.size, animal_id: 2, adopted: false, image_url: line)
 end
+
+File.open("fishes.txt").each do |line|
+  Pet.create!(name: Faker::Dog.name, gender: Faker::Dog.gender, weight: Faker::Dog.size, animal_id: Animal.find_by(name: "Fish").id, adopted: false, image_url: line)
+end
+
+File.open("panda.txt").each do |line|
+  Pet.create!(name: Faker::Dog.name, gender: Faker::Dog.gender, weight: Faker::Dog.size, animal_id: Animal.find_by(name: "Panda").id, adopted: false, image_url: line)
+end
+
+
