@@ -1,0 +1,39 @@
+
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>Zoodopt</h1>
+    <p><em>Build a Zoo. Build a Family.</em></p>
+    <button><a href="/pets/index">Adopt Now</a></button>
+  </div>
+</div>
+
+<div class="home-about">
+
+
+  <div class="about-text">
+      <p><em>A <b style="color:yellow">FAMILY</b>, JUST ONE <a href="/pets/index" style="color:yellow">CLICK</a> AWAY.</em></p>
+  </div>
+</div>
+
+<div class="arrivals">
+  <h2> NEW FRIENDS</h2>
+  <p><em> The most recent cute little animals currently available. <em><p>
+</div>
+<div class="album text-muted">
+  <div class="arrival_items">
+    <div class="album text-muted">
+       <div class="container">
+
+         <div class="row">
+    <% @latest.each do |pet| %>
+    <div class="card">
+      <img src="<%= pet.image_url %>">
+      <p class="card-text">  <%= pet.name %></p>
+    </div>
+      <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
