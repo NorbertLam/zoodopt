@@ -4,7 +4,7 @@
   <div class="hero-text">
     <h1 class="title">Zoodopt</h1>
     <p><em>Build a Zoo. Build a Family.</em></p>
-    <button><a href="/pets/index" style="color: grey">Adopt Now</a></button>
+    <button><a href="/animals" style="color: grey">Adopt Now</a></button>
   </div>
 </div>
 
@@ -12,7 +12,7 @@
 
 
   <div class="about-text">
-      <p><em>A <b style="color:yellow">FAMILY</b>, JUST ONE <a href="/pets/index" style="color:yellow">CLICK</a> AWAY.</em></p>
+      <p><em>A <b style="color:yellow">FAMILY</b>, JUST ONE <a href="/animals" style="color:yellow">CLICK</a> AWAY.</em></p>
   </div>
 </div>
 
@@ -28,8 +28,8 @@
          <div class="row">
     <% @latest.each do |pet| %>
     <div class="card">
-      <img src="<%= pet.image_url %>">
-      <p class="card-text">  <%= pet.name %></p>
+      <a href="/pets/<%= pet.id %>"> <img src="<%= pet.image_url %>">
+      <p class="card-text"> <a href="/pets/<%= pet.id %>"> <%= pet.name %></a></p>
     </div>
       <% end %>
           </div>
