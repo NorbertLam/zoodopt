@@ -14,6 +14,12 @@
  */
  @import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
  @import "bootstrap";
+ @media(min-width: 768px) {
+  .field-label-responsive {
+    padding-top: .5rem;
+    text-align: right;
+  }
+}
 
 body, html {
   height: 100%;
