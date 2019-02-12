@@ -28,9 +28,10 @@ ActiveRecord::Schema.define(version: 2019_02_11_144840) do
     t.string "gender"
     t.string "image_url"
     t.integer "age"
-    t.text "about"
     t.integer "user_id"
     t.integer "animal_id"
+    t.text "about"
+    t.boolean "adopted"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
