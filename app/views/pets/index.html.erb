@@ -3,7 +3,18 @@
     <h1 class="title"> My Pets </h1>
   </div>
 </div>
+
+<div class="container">
+<div class="card-deck">
 <% @pets.each do |pet| %>
-  <li><%= link_to pet.name, pet %></li>
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src=<%= pet.image_url %> alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text"><%= link_to pet.name, pet %></p>
+  </div>
+</div>
 <% end %>
 </div>
+
+</div>
+
