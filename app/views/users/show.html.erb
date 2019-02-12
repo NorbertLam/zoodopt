@@ -3,3 +3,7 @@
 <% @user.pets.each do |pet| %>
   <li><%= link_to pet.name, pet %></li>
 <% end %>
+
+<% @user.animal_count.each do |animal, count| %>
+  <%= "#{animal} #{count}" %><br>
+<% end %>
