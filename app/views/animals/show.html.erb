@@ -1,5 +1,7 @@
 <h1><%= @animal.name %></h1>
 
 <% @pets.each do |pet| %>
-  <li><%= link_to pet.name, pet %></li>
+  <% if pet.adopted == false %>
+    <li><%= link_to pet.name, pet %></li>
+  <% end %>
 <% end %>

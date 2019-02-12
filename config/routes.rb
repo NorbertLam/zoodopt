@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post "/new", to: "users#create"
 
   resources :animals, only: [:index, :show, :new, :create]
-  resources :pets, only: [:index, :show, :new, :create]
+  resources :pets, only: [:index, :show, :new, :create, :edit, :update]
   resources :users, only: [:show, :new, :create]
 
 end
