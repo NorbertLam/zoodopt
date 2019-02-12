@@ -1,5 +1,9 @@
-<h1><%= @pet.name %></h1>
-
+<h1><%= @pet.name %></h1><br>
+<% if @pet.adopted == true %>
+  <h2>Adopted by: <%= link_to @pet.user.to_s, @pet.user %><h2>
+<% else %>
+  <h2>Ready to be adopted!<h2>
+<% end %>
 <br>
 
 <%= form_for @pet do |f| %>
