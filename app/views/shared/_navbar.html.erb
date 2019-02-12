@@ -12,7 +12,11 @@
         <a class="nav-link" href="/pets">My Pets</a>
       </li>
       <li class="nav-item">
+        <% if session[:user_id] %>
         <a class="nav-link" href="/users/<%=session[:user_id]%>">Profile</a>
+        <% else %>
+        <a class="nav-link" href="/login">Profile</a>
+        <% end %>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">About Us</a>
