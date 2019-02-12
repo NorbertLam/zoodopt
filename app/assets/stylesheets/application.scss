@@ -22,7 +22,8 @@ body, html {
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://media.giphy.com/media/mWVu0FoJuq6cg/giphy.gif");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("https://media.giphy.com/media/mWVu0FoJuq6cg/giphy.gif");
+  // background-image: url("https://media.giphy.com/media/mWVu0FoJuq6cg/giphy.gif");
   height: 75%;
   background-attachment: fixed;
   background-position: center;
@@ -62,11 +63,60 @@ body, html {
   color: white;
 }
 
-nav {
-    background:transparent;
-}
 
 .arrivals {
-  display: flex;
-  padding: 10px 25px;
+
+  text-align: center;
+  padding: 25px 25px 25px 0px;
+  background-color: #f7f7f7;
+}
+
+.album {
+  // padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f7f7f7;
+}
+
+.card {
+  float: left;
+  width: 33.333%;
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 0;
+}
+
+.card > img {
+  margin-bottom: .75rem;
+  max-width: 100%;
+}
+
+.card-text {
+  font-size: 85%;
+}
+
+.home-about {
+  background-image: url("fog-foggy-forest-4827.jpg");
+  height: 60%;
+  background-attachment: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.about-text {
+  color: white;
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+
+.pushdown {
+  margin-top: 100px;
+
+}
+
+#fixingit {
+  position: fixed;
 }
