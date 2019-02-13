@@ -4,6 +4,12 @@
   </div>
 </div>
 
+<div class="arrivals">
+  <h2 class="title"> Adopted Pets </h2>
+  <% if @pets.empty? %>
+  <p><em>Currently no adopted pets.<em></p>
+    <% end %>
+</div>
 
 <% @pets.each do |pet| %>
 <div class="flip flip-vertical">

@@ -40,7 +40,9 @@
                     <%= f.hidden_field :pet_id, value: @pet.id %>
                     <!-- <textarea name="content" placeholder="What are you doing right now?" ></textarea> -->
                     <%= f.text_area :content, placeholder: "What do you think about this cutie?" %>
+
                     <%= f.submit "Share", :class => 'btn btn-success green'%>
+
 										<!-- <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Share</button> -->
 									<% end %>
 					</div><!-- Status Upload  -->
@@ -49,12 +51,34 @@
       <div class="col-md-2">
       </div>
       </div>
+
+      <div class="row">
+
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-8">
+          <h5 style="text-align: left"> Comments </h5>
+    	<hr>
+      <% if @posts%>
+      <% @posts.each do |post| %>
+    	<div class="row comment">
+    	    <div class="head">
+    	        <small><strong class='user'><%= post.user.to_s %></strong><%= post.created_at %></small>
+              <% if session[:user_id] == post.user_id %>
+                <%= link_to "/delete_post/#{post.id}", method: :post do %>
+                <i class="far fa-trash-alt" id="right"></i>
+                <% end %>
+              <% end %>
+    	    </div>
+    	</div>
+      <div class="row comment">
+          <p><%= post.content %> </p>
+      </div>
+      <hr>
+      <% end %>
+      <% end %>
+      </div>
+  <div class="col-md-2">
   </div>
-
-
-        <% if @posts%>
-        <% @posts.each do |post| %>
-      <h1><%= post.user.to_s %></h1>
-        <p><%= post.content %></p>
-      <% end %>
-      <% end %>
+</div>
+</div>
