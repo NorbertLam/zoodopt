@@ -13,6 +13,7 @@
 
  */
  @import url('https://fonts.googleapis.com/css?family=Anton');
+ @import url("https://use.fontawesome.com/releases/v5.7.2/css/all.css");
  @import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
  @import "bootstrap";
  @media(min-width: 768px) {
@@ -599,6 +600,25 @@ border-left-color: #2dcb73;
 }
 .status-upload form button > i {
 margin-right: 7px;
+}
+
+.columnchart{
+  display: inline-block;
+  margin: 0 auto;
+  width: auto;
+}
+
+.profile {
+  // float: left;
+  position: relative;
+}
+
+.profile-image {
+  float: left;
+}
+
+.profile-pets {
+display: inline-block;
 }
 
 .submit_button {

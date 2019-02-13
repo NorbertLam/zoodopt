@@ -6,10 +6,99 @@
 
 <h1><%= @user.email %></h1>
 
-<% @user.pets.each do |pet| %>
-  <li><%= link_to pet.name, pet %></li>
-<% end %>
+<div class="profile">
+  <div class="profile-image">
+  <% if !@user.profile_image.nil? and !@user.profile_image.empty? %>
+    <img src=<%= @user.profile_image %> height="400" width="400" >
+  <% end %>
+  </div>
+  
+  <div class="container-fluid">
+	<div class="row">
+		<div class="col-12">
+			<div class="card card-inverse" style="background-color: #333; border-color: #333;">
+				<div class="card-block">
+					<div class="row">
+						<div class="col-md-8 col-sm-8">
+							<h2 class="card-title">Name: <%= @user.to_s %></h2>
+						</div>
+						<div class="col-md-4 col-sm-4 text-center">
+							<img class="btn-md" src="assets/images/card-image.png" alt="" style="border-radius:50%;">
+							</div>
+							<div class="col-md-4 col-sm-4 text-center">
+								<h2>
+									<strong> 5.2K </strong>
+								</h2>
+								<p>
+									<small>Fans</small>
+								</p>
+								<button class="btn btn-primary btn-block btn-md">
+									<span class="fa fa-facebook-square"></span> Like  
+								</button>
+							</div>
+							<div class="col-md-4 col-sm-4 text-center">
+								<h2>
+									<strong>1.4K</strong>
+								</h2>
+								<p>
+									<small>Following</small>
+								</p>
+								<button class="btn btn-success btn-block btn-md">
+									<span class="fa fa-twitter-square"></span> Tweet 
+								</button>
+							</div>
+							<div class="col-md-4 col-sm-4 text-center">
+								<h2>
+									<strong>3.8K</strong>
+								</h2>
+								<p>
+									<small>Followers</small>
+								</p>
+								<button type="button" class="btn btn-danger btn-block btn-md">
+									<span class="fa fa-google-plus-square"></span> Follow 
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-<% @user.animal_count.each do |animal, count| %>
-  <%= "#{animal} #{count}" %><br>
-<% end %>
+<div class="profile-pets">
+  <% @user.pets.each do |pet| %>
+    <div class="flip flip-vertical">
+      <div class="front" style="background-image: url(<%= pet.image_url %>)">
+        <h1 class="text-shadow"><%= pet.name %></h1>
+      </div>
+      <div class="back">
+        <h2><%= pet.name %></h2>
+        <p><%= pet.gender %> </p>
+          <a href="/pets/<%= pet.id %>"><button type="button">Check it out!</button></a>
+      </div>
+  </div>
+  <% end %>
+</div>
+
+<div id="columnchart"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable(<%= raw @user.animal_count %>);
+  // 'width':550, 'height':400,
+  var options = {'title':'My Pets',
+   'vAxis': {format: '#'}
+   };
+
+  var chart = new google.visualization.ColumnChart(document.getElementById('columnchart'));
+  chart.draw(data, options);
+}
+</script>
