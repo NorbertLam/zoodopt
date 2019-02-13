@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   end
 
   def home
-    @latest = Pet.all.last(3)
+    @latest = Pet.all.select { |pet| pet.adopted == false}.last(6)
     render :home
   end
 

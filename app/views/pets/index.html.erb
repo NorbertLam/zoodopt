@@ -4,17 +4,16 @@
   </div>
 </div>
 
-<div class="container">
-<div class="card-deck">
+
 <% @pets.each do |pet| %>
-  <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src=<%= pet.image_url %> alt="Card image cap">
-  <div class="card-body">
-    <p class="card-text"><%= link_to pet.name, pet %></p>
-  </div>
+<div class="flip flip-vertical">
+    <div class="front" style="background-image: url(<%= pet.image_url %>)">
+       <h1 class="text-shadow"><%= pet.name %></h1>
+    </div>
+    <div class="back">
+       <h2><%= pet.name %></h2>
+       <p><%= pet.gender %> </p>
+        <a href="/pets/<%= pet.id %>"><button type="button">Check it out!</button></a>
+    </div>
 </div>
 <% end %>
-</div>
-
-</div>
-
