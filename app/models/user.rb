@@ -7,4 +7,14 @@ class User < ApplicationRecord
   def to_s
     "#{self.first_name} #{self.last_name}"
   end
+
+  def animal_count
+    count = Hash.new(0)
+
+    self.pets.each { |pet|
+      count[pet.animal.name] += 1
+    }
+
+    return count
+  end
 end
