@@ -609,8 +609,8 @@ margin-right: 7px;
 }
 
 .profile {
-  // float: left;
-  position: relative;
+  margin: 0 auto;
+  width: auto;
 }
 
 .profile-image {
@@ -618,7 +618,7 @@ margin-right: 7px;
 }
 
 .profile-pets {
-display: inline-block;
+display: flex;
 }
 
 .submit_button {
@@ -639,7 +639,35 @@ display: inline-block;
   position: relative;
 }
 // comment section end
+// my trash 
+@media (max-width:990px) {
+  .nav {
+    display: none;
+  }
+  
+  .follow {
+    width: 50%;
+    margin-left: 25%;
+    display: block;
+    position: unset;
+    text-align: center;
+  }
+}
+.gallery  {
+  margin-top: 35px;
+}
 
+.gallery div {
+  margin-bottom: 30px;
+}
+
+.gallery img {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.10);
+  width: auto; 
+  height: auto;
+  cursor: pointer;
+  max-width: 100%;
+}
 
 // comments
 hr{
