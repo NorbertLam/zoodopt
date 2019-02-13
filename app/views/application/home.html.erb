@@ -4,7 +4,7 @@
   <div class="hero-text">
     <h1 class="title">Zoodopt</h1>
     <p><em>Build a Zoo. Build a Family.</em></p>
-    <button><a href="/animals" style="color: grey">Adopt Now</a></button>
+    <a href="/animals" ><button>Adopt</button></a>
   </div>
 </div>
 
@@ -20,7 +20,7 @@
   <h2 class="title"> NEW FRIENDS</h2>
   <p><em> Just recently added! <em><p>
 </div>
-
+<div class="cover">
 <% @latest.each do |pet| %>
 <div class="flip flip-vertical">
     <div class="front" style="background-image: url(<%= pet.image_url %>)">
@@ -29,7 +29,8 @@
     <div class="back">
        <h2><%= pet.name %></h2>
        <p><%= pet.gender %> </p>
-        <a href="/pets/<%= pet.id %>"><button type="button">adopt now</button></a>
+        <a href="/pets/<%= pet.id %>"><button type="button">Adopt</button></a>
     </div>
 </div>
 <% end %>
+<div>
