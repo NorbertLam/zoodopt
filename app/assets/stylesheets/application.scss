@@ -624,7 +624,7 @@ display: inline-block;
 .submit_button {
   border: none;
   outline: 0;
-  display: inline-block;
+  // display: inline-block;
   padding: 10px 25px;
   color: black;
   background-color: white;
@@ -639,3 +639,32 @@ display: inline-block;
   position: relative;
 }
 // comment section end
+
+
+// comments
+hr{
+    border-top: 1px solid #000 !important;
+}
+
+.row{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.comment{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.head{
+    margin-bottom: 10px;
+}
+
+.user{
+    margin-right: 10px;
+}
+
+
+// comments end

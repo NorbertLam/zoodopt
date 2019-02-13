@@ -34,6 +34,13 @@ class PetsController < ApplicationController
     redirect_to @post.pet
   end
 
+  def delete_post
+    @post = Post.find(params[:id])
+    @pet = @post.pet
+    @post.destroy
+    redirect_to @pet
+  end
+
   private
 
   def pet_params
