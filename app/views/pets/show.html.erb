@@ -10,7 +10,7 @@
   <%= form_for @pet do |f| %>
     <%= f.hidden_field :user_id, value: @user.id %>
     <%= f.submit 'Adopt '%>
-  <% end %>>
+  <% end %>
 <% end %>
 
 <%= image_tag @pet.image_url %>

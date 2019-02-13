@@ -19,20 +19,41 @@ Animal.create(name: "Elephant", endangered: true, image_url: elephant)
 Animal.create(name: "Otter", endangered: false, image_url: otter)
 
 
-File.open("dogs.txt").each do |line|
+File.open("urls/dogs.txt").each do |line|
   Pet.create!(name: Faker::Dog.name, gender: Faker::Dog.gender, weight: Faker::Dog.size, animal_id: 1, adopted: false, image_url: line)
 end
 
-File.open("cats.txt").each do |line|
+File.open("urls/cats.txt").each do |line|
   Pet.create!(name: Faker::Cat.name, gender: Faker::Dog.gender, weight: Faker::Dog.size, animal_id: 2, adopted: false, image_url: line)
 end
 
-File.open("fishes.txt").each do |line|
-  Pet.create!(name: Faker::Dog.name, gender: Faker::Dog.gender, weight: Faker::Dog.size, animal_id: Animal.find_by(name: "Fish").id, adopted: false, image_url: line)
+File.open("urls/fishes.txt").each do |line|
+  Pet.create!(name: Faker::Name.first_name, gender: Faker::Dog.gender, weight: Faker::Dog.size, animal_id: Animal.find_by(name: "Fish").id, adopted: false, image_url: line)
 end
 
-File.open("panda.txt").each do |line|
+File.open("urls/pandas.txt").each do |line|
   Pet.create!(name: Faker::Dog.name, gender: Faker::Dog.gender, weight: Faker::Dog.size, animal_id: Animal.find_by(name: "Panda").id, adopted: false, image_url: line)
 end
+
+File.open("urls/snakes.txt").each do |line|
+  Pet.create!(name: Faker::Name.first_name, gender: Faker::Dog.gender, weight: Faker::Dog.size, animal_id: Animal.find_by(name: "Snake").id, adopted: false, image_url: line)
+end
+
+File.open("urls/whales.txt").each do |line|
+  Pet.create!(name: Faker::Name.first_name, gender: Faker::Dog.gender, weight: Faker::Dog.size, animal_id: Animal.find_by(name: "Whale").id, adopted: false, image_url: line)
+end
+
+File.open("urls/elephants.txt").each do |line|
+  Pet.create!(name: Faker::Name.first_name, gender: Faker::Dog.gender, weight: Faker::Dog.size, animal_id: Animal.find_by(name: "Elephant").id, adopted: false, image_url: line)
+end
+
+File.open("urls/otters.txt").each do |line|
+  Pet.create!(name: Faker::Name.first_name, gender: Faker::Dog.gender, weight: Faker::Dog.size, animal_id: Animal.find_by(name: "Otter").id, adopted: false, image_url: line)
+end
+
+File.open("urls/birds.txt").each do |line|
+  Pet.create!(name: Faker::Name.first_name, gender: Faker::Dog.gender, weight: Faker::Dog.size, animal_id: Animal.find_by(name: "Bird").id, adopted: false, image_url: line)
+end
+
 
 
