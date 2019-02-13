@@ -605,6 +605,19 @@ margin-right: 7px;
   width: auto;
 }
 
+.profile {
+  // float: left;
+  position: relative;
+}
+
+.profile-image {
+  float: left;
+}
+
+.profile-pets {
+display: inline-block;
+}
+
 
 // comment section end
 
