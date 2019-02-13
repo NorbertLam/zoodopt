@@ -9,6 +9,6 @@ Rails.application.routes.draw do
 
   resources :animals, only: [:index, :show, :new, :create]
   resources :pets, only: [:index, :show, :new, :create, :edit, :update]
-  resources :users, only: [:show, :new, :create]
+  resources :users, only: [:show, :new, :create, :edit, :update]
 
 end
