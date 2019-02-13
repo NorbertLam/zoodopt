@@ -11,11 +11,17 @@ class User < ApplicationRecord
 
   def animal_count
     count = Hash.new(0)
+    data = []
 
     self.pets.each { |pet|
       count[pet.animal.name] += 1
     }
 
-    return count
+    count.each { |animal, num|
+      data << [animal, num]
+    }
+    data.insert(0, ['Animal', 'Count'])
+
+    return data
   end
 end
