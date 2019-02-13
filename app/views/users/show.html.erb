@@ -1,7 +1,16 @@
 <h1><%= @user.email %></h1>
 
 <% @user.pets.each do |pet| %>
-  <li><%= link_to pet.name, pet %></li>
+  <div class="flip flip-vertical">
+    <div class="front" style="background-image: url(<%= pet.image_url %>)">
+       <h1 class="text-shadow"><%= pet.name %></h1>
+    </div>
+    <div class="back">
+       <h2><%= pet.name %></h2>
+       <p><%= pet.gender %> </p>
+        <a href="/pets/<%= pet.id %>"><button type="button">Check it out!</button></a>
+    </div>
+</div>
 <% end %>
 
 <div id="columnchart"></div>
@@ -16,10 +25,8 @@ google.charts.setOnLoadCallback(drawChart);
 // Draw the chart and set the chart values
 function drawChart() {
   var data = google.visualization.arrayToDataTable(<%= raw @user.animal_count %>);
-
+  // 'width':550, 'height':400,
   var options = {'title':'My Pets',
-   'width':550, 
-   'height':400,
    'vAxis': {format: '#'}
    };
 
