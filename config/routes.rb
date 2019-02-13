@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "/new", to: "users#new"
   post "/new", to: "users#create"
   post "/posts", to: "pets#create_post"
+  post "/delete_post/:id", to: "pets#delete_post"
 
   resources :animals, only: [:index, :show, :new, :create]
   resources :pets, only: [:index, :show, :new, :create, :edit, :update]
