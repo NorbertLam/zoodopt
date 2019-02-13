@@ -11,6 +11,8 @@ class PetsController < ApplicationController
 
   def show
     @pet = Pet.find(params[:id])
+    @posts = @pet.posts
+    @post = Post.new
     @user =current_user
   end
 
@@ -27,10 +29,19 @@ class PetsController < ApplicationController
     redirect_to @user
   end
 
+  def create_post
+    @post = Post.create(post_params)
+    redirect_to @post.pet
+  end
+
   private
 
   def pet_params
     params.require(:pet).permit(:user_id)
   end
-  
+
+  def post_params
+    params.require(:post).permit(:user_id, :pet_id, :content)
+  end
+
 end
