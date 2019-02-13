@@ -1,7 +1,26 @@
-<h1><%= @animal.name %></h1>
+<div class="pushdown">
+  Jon and Norberts
+  </div>
+<div class="arrivals">
+  <h2 class="title"> <%= @animal.name %>s </h2>
+  <% if @animal.endangered %>
+  <p><em>Currently an endangered species.<em></p>
+    <% else %>
+  <p><em>Currently NOT an endangered species.<em></p>
+    <% end %>
+</div>
 
 <% @pets.each do |pet| %>
-  <% if pet.adopted == false %>
-    <li><%= link_to pet.name, pet %></li>
-  <% end %>
+<a href="/pets/<%= pet.id %>">
+<div class="flip flip-vertical">
+    <div class="front" style="background-image: url(<%= pet.image_url %>)">
+       <h1 class="text-shadow"><%= pet.name %></h1>
+    </div>
+    <div class="back">
+       <h2><%= pet.name %></h2>
+       <p><%= pet.gender %></p>
+       <p> <%= pet.weight %></p>
+    </div>
+</div>
+</a>
 <% end %>
