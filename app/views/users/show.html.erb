@@ -1,8 +1,3 @@
-<div class="profile-cover">
-  <div class="hero-text">
-    <h1 class="title"> Profile </h1>
-  </div>
-</div>
 
 <div class="cover">
   <div class="profile">
@@ -16,12 +11,19 @@
             <div class="active"></div>
           </div>
           <div class ="profile-info">
-            <h4 class="name"><%= @user.to_s %></h4>
-            <p class="info">UI/UX Designer</p>
+            <h2 class="name"><%= @user.to_s %></h2>
+            <hr width="50%">
             <p class="info"><%= @user.email %></p>
             <% if !@user.email.nil? %>
               <p class="desc"><%= @user.about %></p>
             <% end %>
+          </div>
+          <hr width="10%">
+          <div class="statsrow">
+            <div class="stat col-xs-4" >
+              <p class="number-stat"><%= @user.pets.count %></p>
+              <p class="desc-stat">Pets</p>
+            </div>
           </div>
           <div class="social">
             <i class="fa fa-facebook-square" aria-hidden="true"></i>
@@ -31,8 +33,15 @@
           </div>
         </div>
     </main>
+    
   </div>
 </div>
+
+<% if @user.pets.count > 0 %>
+  <div class="hricon">
+    <hr class="icon">
+  </div>
+<% end %>
 
 <div class="profile-pets">
   <% @user.pets.each do |pet| %>
@@ -47,6 +56,10 @@
       </div>
   </div>
   <% end %>
+</div>
+
+<div class="hricon">
+  <hr class="icon">
 </div>
 
 <% if @user.animal_count.count > 1 %>
