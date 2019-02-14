@@ -602,22 +602,52 @@ border-left-color: #2dcb73;
 margin-right: 7px;
 }
 
-.columnchart{
-  display: inline-block;
-  margin: 0 auto;
-  width: auto;
-}
-
 .profile {
   color :black;
   display: inline-flex;
   margin: 0 auto;
+  padding-top: 5%;
   width: auto;
 }
 
 .photo-left {
   margin-top: 15px;
 }
+
+.photo {
+  border-radius: 100px;
+  border: 4px solid #fff;
+}
+
+.hricon {
+  // display: inline-block;
+  margin: 0 auto;
+  width: auto;
+  background-color: white;
+}
+
+hr.icon {
+  // display: inline-block;
+  margin: 25px auto 30px;
+  padding: 0;
+  border: 0;
+  border-top: solid 3px;
+  text-align: center;
+  background-color: white;
+  }
+  
+hr.icon:after {
+  content: "\f1b0";
+  display: inline-block;
+  position: relative;
+  top: -1.9rem;
+  padding: 0 1rem;
+  font-family: FontAwesome;
+  font-size: 3rem;
+  background-color: white; // Must Match Page Background
+  }
+
+// end of my trash
 
 .submit_button {
   border: none;

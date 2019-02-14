@@ -5,6 +5,8 @@ class User < ApplicationRecord
   has_many :animals, through: :pets
   has_many :posts
 
+  validates :about, length: { maximum: 240 }
+
   def to_s
     "#{self.first_name} #{self.last_name}"
   end
