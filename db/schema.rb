@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2019_02_13_140454) do
     t.string "first_name"
     t.string "last_name"
     t.string "profile_image"
+    t.string "about"
     t.integer "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

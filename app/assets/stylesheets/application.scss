@@ -609,16 +609,14 @@ margin-right: 7px;
 }
 
 .profile {
+  color :black;
+  display: inline-flex;
   margin: 0 auto;
   width: auto;
 }
 
-.profile-image {
-  float: left;
-}
-
-.profile-pets {
-display: flex;
+.photo-left {
+  margin-top: 15px;
 }
 
 .submit_button {
