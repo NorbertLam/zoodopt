@@ -13,7 +13,9 @@
           <div class ="profile-info">
             <h2 class="name"><%= @user.to_s %></h2>
             <hr width="50%">
-            <p class="info"><%= @user.email %></p>
+            <% if session[:user_id] == @user.id %>
+              <p class="info"><%= @user.email %></p>
+            <% end %>
             <% if !@user.email.nil? %>
               <p class="desc"><%= @user.about %></p>
             <% end %>
