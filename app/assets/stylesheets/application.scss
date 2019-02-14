@@ -83,6 +83,15 @@ body, html {
   position: relative;
 }
 
+.user-arrivals-animals {
+  text-align: center;
+  padding: 25px 25px 25px 25px;
+  margin-bottom: -25px;
+  // background: url("backgroundcolor.png");
+  background-color: white;
+  position: relative;
+}
+
 .arrivals-animals {
 
   text-align: center;
@@ -685,12 +694,7 @@ margin-right: 7px;
 
 hr.icon {
   // display: inline-block;
-  margin: 25px auto 30px;
-  padding: 0;
-  border: 0;
-  border-top: solid 3px;
-  text-align: center;
-  background-color: white;
+  border-top: 1px solid #000;
   }
 
 hr.icon:after {
@@ -701,7 +705,7 @@ hr.icon:after {
   padding: 0 1rem;
   font-family: FontAwesome;
   font-size: 3rem;
-  background-color: white; // Must Match Page Background
+   // Must Match Page Background
   }
 
 // end of my trash

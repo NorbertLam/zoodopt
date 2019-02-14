@@ -39,11 +39,13 @@
   </div>
 </div>
 
-<% if @user.pets.count > 0 %>
-  <div class="hricon">
-    <hr class="icon">
-  </div>
-<% end %>
+
+<div class="user-arrivals-animals">
+  <h1 class="second-animal-title"><i class="fas fa-paw"></i> </h1>
+  <% if @user.pets.count > 0 %>
+    <hr class="blue_horizontal">
+  <% end %>
+</div>
 
 <div class="profile-pets">
   <% @user.pets.each do |pet| %>
@@ -60,8 +62,9 @@
   <% end %>
 </div>
 
-<div class="hricon">
-  <hr class="icon">
+<div class="user-arrivals-animals">
+  <h1 class="second-animal-title"> Statistics </h1>
+    <hr class="blue_horizontal">
 </div>
 
 <% if @user.animal_count.count > 1 %>
