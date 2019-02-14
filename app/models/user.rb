@@ -6,6 +6,9 @@ class User < ApplicationRecord
   has_many :posts
 
   validates :about, length: { maximum: 240 }
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :email, presence: true, uniqueness: true
 
   def to_s
     "#{self.first_name} #{self.last_name}"
