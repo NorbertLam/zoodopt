@@ -22,36 +22,35 @@
   <div style="background: url(<%= asset_path 'forest5.png' %>);"></div>
   <div style="background: url(<%= asset_path 'forest4.png' %>);"></div>
   <div style="background: url(<%= asset_path 'forest3.svg' %>);"></div>
-    <div style="background: url(<%= asset_path 'forest3.5.svg' %>);"><h1 class="home-title">Zoodopt</h1></div>
+  <div style="background: url(<%= asset_path 'forest3.5.svg' %>);"><h1 class="home-title">Zoodopt</h1></div>
   <div style="background: url(<%= asset_path 'forest2.svg' %>);"></div>
   <div style="background: url(<%= asset_path 'forest1.5.svg' %>);"></div>
   <div style="background: url(<%= asset_path 'VECTORFOREST1.svg' %>);"></div>
 </div>
 
-
-<div class="home-about">
-
-
-  <div class="about-text">
-      <p><em>A <b style="color:yellow">FAMILY</b>, JUST ONE <a href="/animals" style="color:yellow">CLICK</a> AWAY.</em></p>
+<div class="content">
+  <div class="home-about">
+    <div class="about-text">
+        <p><em>A <b style="color:yellow">FAMILY</b>, JUST ONE <a href="/animals" style="color:yellow">CLICK</a> AWAY.</em></p>
+    </div>
   </div>
-</div>
 
-<div class="arrivals">
-  <h2 class="title"> NEW FRIENDS</h2>
-  <p><em> Just recently added! <em><p>
-</div>
-<div class="cover">
-<% @latest.each do |pet| %>
-<div class="flip flip-vertical">
-    <div class="front" style="background-image: url(<%= pet.image_url %>)">
-       <h1 class="text-shadow"><%= pet.name %></h1>
-    </div>
-    <div class="back">
-       <h2><%= pet.name %></h2>
-       <p><%= pet.gender %> </p>
-        <a href="/pets/<%= pet.id %>"><button type="button">Adopt</button></a>
-    </div>
-</div>
-<% end %>
-<div>
+  <div class="arrivals">
+    <h2 class="title"> NEW FRIENDS</h2>
+    <p><em> Just recently added! <em><p>
+  </div>
+  <div class="cover">
+  <% @latest.each do |pet| %>
+  <div class="flip flip-vertical">
+      <div class="front" style="background-image: url(<%= pet.image_url %>)">
+         <h1 class="text-shadow"><%= pet.name %></h1>
+      </div>
+      <div class="back">
+         <h2><%= pet.name %></h2>
+         <p><%= pet.gender %> </p>
+          <a href="/pets/<%= pet.id %>"><button type="button">Adopt</button></a>
+      </div>
+  </div>
+  <% end %>
+  <div>
+  </div>

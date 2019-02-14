@@ -648,7 +648,7 @@ hr.icon {
   text-align: center;
   background-color: white;
   }
-  
+
 hr.icon:after {
   content: "\f1b0";
   display: inline-block;
@@ -753,8 +753,9 @@ body {
 }
 
 #parallax-container div {
+  background-size: cover !important;
+  // background-repeat: no-repeat !important;
   position: fixed;
-  background-size: auto;
   top: 0;
   background-position: center !important;
   transform: translateY(0px);
@@ -769,15 +770,19 @@ body {
   padding: 100px;
 }
 
-#content h1 {
-  font-size: 100px;
-  text-align: center;
-  font-family: 'Markazi Text', serif;
-}
+// #content h1 {
+//   font-size: 100px;
+//   text-align: center;
+//   font-family: 'Markazi Text', serif;
+// }
+//
+// #content p {
+//   font-size: 18px;
+//   font-family: 'Raleway', sans-serif;
+// }
 
-#content p {
-  font-size: 18px;
-  font-family: 'Raleway', sans-serif;
-}
+.navbar-custom {
 
+  background: rbga(0,0,0, 0.2);
+}
 // multi end
