@@ -59,6 +59,10 @@
           <div class="col-md-8">
           <h5 style="text-align: left"> Comments </h5>
     	<hr>
+      <% if @posts.empty? %>
+      <p>No comments yet.</p>
+      <hr>
+      <% end %>
       <% if @posts%>
       <% @posts.each do |post| %>
     	<div class="row comment">

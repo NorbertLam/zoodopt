@@ -113,7 +113,7 @@ body, html {
 }
 
 .home-about {
-  background-image: url("fog-foggy-forest-4827.jpg");
+  background-color: #0f1e25;
   height: 60%;
   background-attachment: relative;
   background-position: center;
@@ -227,6 +227,19 @@ section .section-title {
   border-style: solid;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.home-title {
+  text-align: center;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  border-style: solid;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 5em;
 }
 // .navbar-brand {
 //   // font-family: 'Anton', sans-serif;
@@ -667,12 +680,12 @@ hr.icon:after {
   position: relative;
 }
 // comment section end
-// my trash 
+// my trash
 @media (max-width:990px) {
   .nav {
     display: none;
   }
-  
+
   .follow {
     width: 50%;
     margin-left: 25%;
@@ -691,7 +704,7 @@ hr.icon:after {
 
 .gallery img {
   box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.10);
-  width: auto; 
+  width: auto;
   height: auto;
   cursor: pointer;
   max-width: 100%;
@@ -724,3 +737,47 @@ hr{
 
 
 // comments end
+
+// multi parallax
+
+@import url('https://fonts.googleapis.com/css?family=Markazi+Text|Raleway');
+
+
+body {
+  margin: 0;
+}
+
+#parallax-container {
+  display: block;
+  height: 900px;
+}
+
+#parallax-container div {
+  position: fixed;
+  background-size: auto;
+  top: 0;
+  background-position: center !important;
+  transform: translateY(0px);
+  height: 900px;
+  width: 100%;
+}
+
+#content {
+  position: relative;
+  background-color: #030f33;
+  color: #ffffff;
+  padding: 100px;
+}
+
+#content h1 {
+  font-size: 100px;
+  text-align: center;
+  font-family: 'Markazi Text', serif;
+}
+
+#content p {
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+}
+
+// multi end
