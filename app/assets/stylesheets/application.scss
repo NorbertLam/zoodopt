@@ -73,13 +73,50 @@ body, html {
 }
 
 
+.arrivals-home {
+
+  text-align: center;
+  padding: 50px 25px 25px 25px;
+  margin-bottom: -25px;
+  background: url("backgroundcolor.png");
+  // background-color: white;
+  position: relative;
+}
+
+.arrivals-animals {
+
+  text-align: center;
+  padding: 75px 25px 25px 25px;
+  margin-bottom: -25px;
+  // background: url("backgroundcolor.png");
+  background-color: white;
+  position: relative;
+}
+
+.second-animal-title {
+  font-size: 2em;
+  text-align: left;
+  margin-left: 25px;
+  color: #0f1e25;
+}
+
+.blue_horizontal {
+  color: #0f1e25;
+}
 .arrivals {
 
   text-align: center;
   padding: 50px 25px 25px 25px;
   margin-bottom: -25px;
-  // background-color: #f7f7f7;
   background-color: white;
+  position: relative;
+}
+
+.arrivalsanimalshow {
+  text-align: center;
+  padding: 50px 25px 25px 25px;
+  margin-bottom: -25px;
+  background-color: #0f1e25;
   position: relative;
 }
 
@@ -87,7 +124,7 @@ body, html {
   // padding-top: 3rem;
   padding-bottom: 3rem;
   // background-color: #f7f7f7;
-  background-color: white;
+  // background:
 }
 
 #album {
@@ -113,7 +150,7 @@ body, html {
 }
 
 .home-about {
-  background-color: #0f1e25;
+  background: url('cave.png');
   height: 60%;
   background-attachment: relative;
   background-position: center;
@@ -130,11 +167,7 @@ body, html {
   font-size: 2rem;
 }
 
-// .pushdown {
-//   margin-top: 50px;
-//   position: relative;
-//
-// }
+
 
 #fixingit {
   margin-top: 200px;
@@ -154,12 +187,12 @@ section {
 
 section .section-title {
     text-align: center;
-    color: #022117;
+    color: #0f1e25;
     margin-bottom: 50px;
     text-transform: uppercase;
 }
 #footer {
-    background: #022117 !important;
+    background: #0f1e25 !important;
     position: relative;
 }
 #footer h5{
@@ -227,6 +260,18 @@ section .section-title {
   border-style: solid;
   padding-left: 15px;
   padding-right: 15px;
+  color: white;
+}
+
+.second-home-title {
+  color: white;
+  font-size: 2em;
+  text-align: left;
+  margin-left: 25px;
+}
+
+.white_horizontal {
+  border-top: 1px solid white;
 }
 
 .home-title {
@@ -239,11 +284,10 @@ section .section-title {
   border-style: solid;
   padding-left: 15px;
   padding-right: 15px;
-  font-size: 5em;
+  font-size: 4em;
 }
-// .navbar-brand {
-//   // font-family: 'Anton', sans-serif;
-// }
+
+
 
 .animals-cover {
   // background-image: url("fog-foggy-forest-40726.jpg");
@@ -396,7 +440,7 @@ h1 {
       background-position: center!important;
       height: 300px;
       padding: 1em 2em;
-      background: #313131;
+      background: #0f1e25;
       border-radius: 10px;
       p {
         font-size: 0.9125rem;
@@ -473,7 +517,7 @@ h1 {
       background-position: center!important;
       height: 600px;
       padding: 1em 2em;
-      background: #313131;
+      background: #0f1e25;
       border-radius: 10px;
       p {
         font-size: 0.9125rem;
@@ -486,7 +530,7 @@ h1 {
 // profile flips end
 
 .text-shadow {
-text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
+text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04);
 }
 
 // comment section CSS
@@ -676,6 +720,14 @@ hr.icon:after {
 
 .cover {
   color: white;
+  background: url("backgroundcolor.png");
+  // background-color: white;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.user_cover {
+  color: white;
   background-color: white;
   position: relative;
 }
@@ -712,7 +764,7 @@ hr.icon:after {
 
 // comments
 hr{
-    border-top: 1px solid #000 !important;
+    border-top: 1px solid #000;
 }
 
 .row{
@@ -781,8 +833,18 @@ body {
 //   font-family: 'Raleway', sans-serif;
 // }
 
-.navbar-custom {
+.navbar {
+  background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0));
+  // background-image: url('black_gradient_980x301.png');
 
-  background: rbga(0,0,0, 0.2);
+  background-attachment: fixed;
+
+  background-position: center bottom;
 }
+
+
+.bottomportion {
+  background: url("cave_trees.png");
+}
+
 // multi end
