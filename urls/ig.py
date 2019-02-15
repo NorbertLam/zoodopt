@@ -61,4 +61,5 @@ def explore(url, file): # scrap ig explore page
 # souped("https://www.instagram.com/elephantoftheweek/?hl=en", 'elephant')
 # sleep(5)
 # souped('https://www.instagram.com/daily_otters/?hl=en', 'otter')
-souped("https://www.instagram.com/dogs/?hl=en", 'dogs')
+# souped("https://www.instagram.com/dogs/?hl=en", 'dogs')
+souped('https://www.instagram.com/topdogs_nz/', 'dogs')
