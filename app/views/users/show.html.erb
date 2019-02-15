@@ -3,14 +3,19 @@
   <div class="profile">
     <main>
       <div class="row">
-        <div class="left-col">
+
+        <div class=".col-xs-12 .col-sm-6 .col-md-8">
+
           <div class="photo-left">
             <% if @user.profile_image != "" and !@user.profile_image.nil? %>
-              <img class="photo" src=<%= @user.profile_image %> height="400" width="400" />
+              <img class="photo" src=<%= @user.profile_image %> height="400px" width="600px"/>
             <% end %>
             <div class="active"></div>
-          </div>
-          <div class ="profile-info">
+
+          </div
+
+          <div class =".col-xs-6 .col-md-4">
+
             <h2 class="name"><%= @user.to_s %></h2>
             <hr width="50%">
             <% if session[:user_id] == @user.id %>
@@ -19,21 +24,18 @@
             <% if !@user.email.nil? %>
               <p class="desc"><%= @user.about %></p>
             <% end %>
-          </div>
-          <hr width="10%">
-          <div class="statsrow">
-            <div class="stat col-xs-4" >
-              <p class="number-stat"><%= @user.pets.count %></p>
-              <p class="desc-stat">Pets</p>
-            </div>
-          </div>
+          <hr width="50%">
+
           <div class="social">
             <i class="fa fa-facebook-square" aria-hidden="true"></i>
             <i class="fa fa-twitter-square" aria-hidden="true"></i>
             <i class="fa fa-pinterest-square" aria-hidden="true"></i>
             <i class="fa fa-tumblr-square" aria-hidden="true"></i>
           </div>
+
         </div>
+        </div>
+
     </main>
 
   </div>
@@ -41,9 +43,10 @@
 
 
 <div class="user-arrivals-animals">
-  <h1 class="second-animal-title"><i class="fas fa-paw"></i> </h1>
-  <% if @user.pets.count > 0 %>
-    <hr class="blue_horizontal">
+  <h1 class="second-animal-title"> <%= @user.pets.count %> <i class="fas fa-paw"></i> </h1>
+  <hr class="blue_horizontal">
+  <% if @user.pets.count == 0 %>
+  <p><em>You have not adopted any pets.</em></p>
   <% end %>
 </div>
 
@@ -65,6 +68,10 @@
 <div class="user-arrivals-animals">
   <h1 class="second-animal-title"> Statistics </h1>
     <hr class="blue_horizontal">
+    <% if @user.pets.count == 0 %>
+    <p class="stat-empty-margin"><em>No statistics yet.</em></p>
+    <hr class="blue_horizontal">
+    <% end %>
 </div>
 
 <% if @user.animal_count.count > 1 %>
