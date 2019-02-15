@@ -8,6 +8,22 @@ whale = "https://www.dolphin-star.com/wp-content/uploads/2017/08/Killer-Whale-Ph
 elephant = "https://c1.staticflickr.com/8/7391/11330864553_82160a8f8d_h.jpg"
 otter = "https://c1.staticflickr.com/5/4084/5067704461_8fba71859f_b.jpg"
 
+User.create(first_name: "Sarah",
+            last_name: "Doe",
+            email: "SarahDoe@email.com".downcase,
+            password: "password1",
+            profile_image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample4.jpg",
+            about: "Here is an about me. I like animals!"
+  )
+
+  User.create(first_name: "Emma",
+            last_name: "Watson",
+            email: "emma@email.com".downcase,
+            password: "password1",
+            profile_image: "https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Ftimedotcom.files.wordpress.com%2F2015%2F12%2Fgettyimages-485360238.jpg",
+            about: "I like animals!"
+  )
+
 Animal.create(name: "Dog", endangered: false, image_url: dog)
 Animal.create(name: "Cat", endangered: false, image_url: cat)
 Animal.create(name: "Bird", endangered: false, image_url: bird)

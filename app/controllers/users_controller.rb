@@ -6,6 +6,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.email = user_params[:email].downcase
+    @user.profile_image = "https://secure.gravatar.com/avatar/eed0bc78a6270ea8f2e11065e72dd50a?s=600&d=mm&r=g"
     flash[:error] = nil
 
     if @user.save
