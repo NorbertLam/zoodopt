@@ -4,12 +4,13 @@ from time import sleep
 from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 
+
+ # Takes in an url and file name. Creates  or open .txt based on name
 def souped(url, file): # scrape specific ig page
-    f = open(file+".txt", "a")
-    page = urllib.request.urlopen(url).read()
+    f = open(file+".txt", "a") # Open file and appends data to it
+    page = urllib.request.urlopen(url).read() # Open url and saves html
     soup = BeautifulSoup(page, 'lxml')
-    # print(soup.prettify())
-    script = soup.find('script', text=lambda t: t.startswith('window._sharedData'))
+    script = soup.find('script', text=lambda t: t.startswith('window._sharedData')) # Soup finds script tags
 
     page_json = script.text.split(' = ', 1)[1].rstrip(';')
     data = json.loads(page_json)
@@ -19,10 +20,11 @@ def souped(url, file): # scrape specific ig page
 
     print(url_path.strip('/'))
 
+    # Loops through where images are and adds it to file
     for i in data["entry_data"]["ProfilePage"][0]["graphql"]["user"]['edge_owner_to_timeline_media']['edges']:
         if not i['node']['is_video']:
             f.write(i['node']['display_url']+"\n")
-    
+
     f.close()
 
 
@@ -43,7 +45,7 @@ def explore(url, file): # scrap ig explore page
     for i in data['entry_data']['TagPage'][0]['graphql']['hashtag']['edge_hashtag_to_media']['edges']:
         if not i['node']['is_video']:
             f.write(i['node']['display_url']+"\n")
-    
+
     f.close()
 
 # souped("https://www.instagram.com/instapandacool/?hl=en")
@@ -51,7 +53,7 @@ def explore(url, file): # scrap ig explore page
 # https://randomfox.ca/floof/
 # https://www.instagram.com/humpbackswims/?hl=en
 # https://www.instagram.com/explore/tags/elephant/?hl=en
-# https://www.instagram.com/daily_otters/?hl=en 
+# https://www.instagram.com/daily_otters/?hl=en
 # souped("https://www.instagram.com/best_birds_of_world/?hl=en", "birds")
 # sleep(5)
 # souped("https://www.instagram.com/beautifulsnakes/", 'snakes')
