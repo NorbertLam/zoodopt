@@ -43,7 +43,7 @@ rails s
 - scraped Instagram images on specific pages with Python and BeautifulSoup4
 - animal names and sizes seeded with Faker Gem
 
-## Comments
+### Comments
 - Users can write comments/posts on animal show pages.
 - Users can delete only their own posts.
 
