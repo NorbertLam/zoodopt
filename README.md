@@ -32,7 +32,6 @@ rails s
 
 ### User Authentication
 - Users can sign up and log in.
-- Error messages are indicated for failed log ins and signups
 - User password is encrypted with BCrypt Gem.
 
 ### Adoption
@@ -46,6 +45,9 @@ rails s
 ### Comments
 - Users can write comments/posts on animal show pages.
 - Users can delete only their own posts.
+
+### Multi Parallax Scrolling
+- Implemented with vectorized transparent images made with Adobe Illustrator and Photoshop.
 
 ## Built With
 
