@@ -56,5 +56,5 @@ rails s
 
 ## Contributors
 
-Jonathan Chan github.com/ParmeJon
-Norbert Lam github.com/NorbertLam
+* Jonathan Chan github.com/ParmeJon
+* Norbert Lam github.com/NorbertLam
