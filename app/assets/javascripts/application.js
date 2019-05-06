@@ -20,10 +20,10 @@
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 75) {
-      $('.navbar').fadeOut();
+    $('.navbar').fadeOut();
   }
   else {
-      $('.navbar').fadeIn();
+    $('.navbar').fadeIn();
   }
   let parent =  document.getElementById('parallax-container');
   let children = parent.getElementsByTagName('div');

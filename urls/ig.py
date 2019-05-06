@@ -22,7 +22,7 @@ def souped(url, file): # scrape specific ig page
     for i in data["entry_data"]["ProfilePage"][0]["graphql"]["user"]['edge_owner_to_timeline_media']['edges']:
         if not i['node']['is_video']:
             f.write(i['node']['display_url']+"\n")
-    
+
     f.close()
 
 
@@ -43,7 +43,7 @@ def explore(url, file): # scrap ig explore page
     for i in data['entry_data']['TagPage'][0]['graphql']['hashtag']['edge_hashtag_to_media']['edges']:
         if not i['node']['is_video']:
             f.write(i['node']['display_url']+"\n")
-    
+
     f.close()
 
 # souped("https://www.instagram.com/instapandacool/?hl=en")
@@ -51,15 +51,15 @@ def explore(url, file): # scrap ig explore page
 # https://randomfox.ca/floof/
 # https://www.instagram.com/humpbackswims/?hl=en
 # https://www.instagram.com/explore/tags/elephant/?hl=en
-# https://www.instagram.com/daily_otters/?hl=en 
+# https://www.instagram.com/daily_otters/?hl=en
 # souped("https://www.instagram.com/best_birds_of_world/?hl=en", "birds")
 # sleep(5)
 # souped("https://www.instagram.com/beautifulsnakes/", 'snakes')
 # sleep(5)
 # explore("https://www.instagram.com/explore/tags/whale/?hl=en", 'whales')
 # sleep(5)
-# souped("https://www.instagram.com/elephantoftheweek/?hl=en", 'elephant')
+souped("https://www.instagram.com/elephantoftheweek/?hl=en", 'elephant')
 # sleep(5)
 # souped('https://www.instagram.com/daily_otters/?hl=en', 'otter')
 # souped("https://www.instagram.com/dogs/?hl=en", 'dogs')
-souped('https://www.instagram.com/topdogs_nz/', 'dogs')
+# souped('https://www.instagram.com/topdogs_nz/', 'dogs')

@@ -693,6 +693,7 @@ margin-right: 7px;
 .photo {
   border-radius: 100px;
   border: 4px solid #fff;
+  padding-bottom: 15px;
   // object-fit: cover;
 }
 
@@ -821,7 +822,6 @@ body {
 
 #parallax-container div {
   background-size: cover !important;
-  // background-repeat: no-repeat !important;
   position: fixed;
   top: 0;
   background-position: center !important;
@@ -859,7 +859,7 @@ body {
 
 
 .bottomportion {
-  background: url("cave_trees.png");
+  // background: url("cave_trees.png");
 }
 
 .stat-empty-margin {
