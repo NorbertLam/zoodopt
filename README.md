@@ -2,6 +2,10 @@
 
 Zoodopt is an animal adoption site for building and managing your own virtual zoo.
 
+## Demo Link
+
+https://www.youtube.com/watch?v=h_q-LZjpfZA
+
 ## Getting Started
 
 Clone down the repo here:
@@ -13,6 +17,7 @@ After cloning down run this in your terminal.
 3. rails db: seed
 
 ```
+
 ## Start up the server!
 
 In your terminal type:
