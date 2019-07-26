@@ -1,4 +1,4 @@
-panda = "https://scontent-lga3-1.cdninstagram.com/vp/3f1d7490279b2b41fc282bbb8c3f7588/5CEDA3C8/t51.2885-15/e35/49531835_2150946808299808_8133279009195066812_n.jpg?_nc_ht=scontent-lga3-1.cdninstagram.com"
+panda = "https://live.staticflickr.com/8279/15596874808_cd0806c732_b.jpg"
 dog = "https://farm5.staticflickr.com/4034/4582991692_d35aaf3162_b.jpg"
 cat = "https://c2.staticflickr.com/8/7525/16316696022_61870a3f41_h.jpg"
 bird = "https://c1.staticflickr.com/9/8457/8049996428_b53f6c5234_b.jpg"
